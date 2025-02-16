@@ -1,0 +1,424 @@
+{
+    "categories": [
+      {
+        "name": "Cookies",
+        "id": "cookies",
+        "imgLink": "https://plus.unsplash.com/premium_photo-1670895802184-176bbb53a2f7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        "name": "Ice Creams",
+        "id": "iceCreams",
+        "imgLink": "https://images.unsplash.com/photo-1597249536924-b226b1a1259d?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        "name": "Fried",
+        "id": "fried",
+        "imgLink": "https://images.unsplash.com/photo-1596450514735-111a2fe02935?q=80&w=1411&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        "name": "Fruits",
+        "id": "fruits",
+        "imgLink": "https://plus.unsplash.com/premium_photo-1691787288736-b107c176ef02?q=80&w=1377&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      }
+    ],
+    "sponsor": [
+      {
+        "id": 1,
+        "dish": "Tiramisu",
+        "image": "https://img.freepik.com/free-photo/plate-with-tiramisu_23-2147772017.jpg?t=st=1732303160~exp=1732306760~hmac=ab723574d051f0e3f9a57ef87ba8a1e0779c2f245dee9b0bed47302511d3714d&w=360",
+        "url": "https://tastesbetterfromscratch.com/easy-tiramisu/"
+      },
+      {
+        "id": 2,
+        "dish": "Cheesecake",
+        "image": "https://img.freepik.com/premium-photo/homemade-cheesecake-with-raspberries-blueberries_1339-38051.jpg?w=360",
+        "url": "https://bakerbynature.com/extra-rich-and-creamy-cheesecake/"
+      },
+      {
+        "id": 3,
+        "dish": "Brownies",
+        "image": "https://img.freepik.com/free-photo/close-up-delicious-brownies-ready-be-served_23-2148622346.jpg?t=st=1732303348~exp=1732306948~hmac=4394360c510a8518a06b5e890253f288a6b5348705fbddde88afaa6be2738aeb&w=360",
+        "url": "https://www.allrecipes.com/recipe/10549/best-brownies/"
+      },
+      {
+        "id": 4,
+        "dish": "Creme Brulee",
+        "image": "https://img.freepik.com/premium-photo/creme-brulee-french-vanilla-cream-dessert-with-caramelised-sugar-berries-selective-focus_154293-6215.jpg?w=360",
+        "url": "https://cooking.nytimes.com/recipes/9039-vanilla-creme-brulee"
+      }
+    ],
+    "faq": [
+      {
+        "id": "022024Q1",
+        "question": "Do you accept custom orders?",
+        "answer": "Yes, we do! You can place custom orders for cakes, cupcakes, and other desserts for special occasions like birthdays, weddings, or corporate events."
+      },
+      {
+        "id": "022024Q2",
+        "question": "How can I place an order?",
+        "answer": "You can place an order through our website, by phone, or by visiting our store in person. For custom orders, we recommend contacting us at least 48 hours in advance."
+      },
+      {
+        "id": "022024Q3",
+        "question": "Do you offer delivery?",
+        "answer": "Yes, we offer delivery services within a certain radius of our store. Delivery charges apply based on distance and order size."
+      }
+    ],
+    "cookies": [
+      {
+        "id": "choco-cookies",
+        "dish": "Chocolate Chip Cookies",
+        "description": "Classic chocolate chip cookies with a soft and chewy texture, packed with semi-sweet chocolate chips for a perfect treat.",
+        "recipe": "Preheat the oven to 175°C (350°F). In a bowl, cream together 1 cup of softened butter, 1 cup of brown sugar, and 1/2 cup of granulated sugar until fluffy. Mix in 2 large eggs and 2 teaspoons of vanilla extract. In another bowl, whisk together 2 1/4 cups of flour, 1 teaspoon of baking soda, and 1/2 teaspoon of salt. Gradually add the dry ingredients to the wet ingredients. Fold in 2 cups of semi-sweet chocolate chips. Drop spoonfuls of dough onto a lined baking sheet and bake for 10-12 minutes, or until golden. Cool on a wire rack.",
+        "minutesOfPreparation": 25,
+        "cookingTimeMinutes": 10,
+        "stars": 3.4,
+        "recipeYield": "5 to 10 cookies",
+        "keywords": "chocolate chip cookies, easy cookie recipe, homemade cookies, baking recipes",
+        "reviewCount": 12,
+        "image": "https://plus.unsplash.com/premium_photo-1670895802114-dc3bc13b5963?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Cookies",
+        "calories": "250 per serving",
+        "cuisine": "American",
+        "ingredients": [
+          "1 cup softened butter",
+          "1 cup brown sugar",
+          "1/2 cup granulated sugar",
+          "2 large eggs",
+          "2 teaspoons vanilla extract",
+          "2 1/4 cups all-purpose flour",
+          "1 teaspoon baking soda",
+          "1/2 teaspoon salt",
+          "2 cups semi-sweet chocolate chips"
+        ]
+      },
+      {
+        "id": "oatmeal-cookies",
+        "dish": "Oatmeal Raisin Cookies",
+        "description": "Soft and chewy oatmeal raisin cookies with a perfect balance of sweetness and spice, packed with hearty oats and plump raisins.",
+        "recipe": "Preheat the oven to 175°C (350°F). In a large bowl, cream together 3/4 cup of softened butter, 3/4 cup of brown sugar, and 1/2 cup of granulated sugar until smooth. Beat in 2 eggs and 1 teaspoon of vanilla extract. In another bowl, combine 1 1/2 cups of flour, 1 teaspoon of baking soda, 1 teaspoon of cinnamon, and 1/2 teaspoon of salt. Gradually mix the dry ingredients into the wet ingredients. Stir in 3 cups of rolled oats and 1 cup of raisins. Drop spoonfuls of dough onto a lined baking sheet and bake for 10-12 minutes. Let cool on a wire rack.",
+        "minutesOfPreparation": 30,
+        "cookingTimeMinutes": 12,
+        "stars": 4.6,
+        "recipeYield": "18 to 24 cookies",
+        "keywords": "oatmeal raisin cookies, classic cookie recipe, easy baking, chewy cookies, raisin desserts",
+        "reviewCount": 25,
+        "image": "https://images.unsplash.com/photo-1590080875897-b7b65b2f73d7?q=80&w=561&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Cookies",
+        "calories": "220 per serving",
+        "cuisine": "American",
+        "ingredients": [
+          "3/4 cup softened butter",
+          "3/4 cup brown sugar",
+          "1/2 cup granulated sugar",
+          "2 eggs",
+          "1 teaspoon vanilla extract",
+          "1 1/2 cups all-purpose flour",
+          "1 teaspoon baking soda",
+          "1 teaspoon cinnamon",
+          "1/2 teaspoon salt",
+          "3 cups rolled oats",
+          "1 cup raisins"
+        ]
+      },
+      {
+        "id": "peanut-cookies",
+        "dish": "Peanut Butter Cookies",
+        "description": "Classic peanut butter cookies with a soft and crumbly texture, featuring a delightful crisscross pattern and rich nutty flavor.",
+        "recipe": "Preheat the oven to 175°C (350°F). In a bowl, beat together 1/2 cup of softened butter, 1/2 cup of peanut butter, 1/2 cup of granulated sugar, and 1/2 cup of brown sugar until creamy. Add 1 egg and 1 teaspoon of vanilla extract and mix well. In a separate bowl, whisk together 1 1/4 cups of flour, 1/2 teaspoon of baking soda, and 1/4 teaspoon of salt. Gradually add the dry ingredients to the wet ingredients. Roll the dough into balls and place them on a lined baking sheet. Flatten each ball with a fork, creating a crisscross pattern. Bake for 10-12 minutes and cool on a wire rack.",
+        "minutesOfPreparation": 25,
+        "cookingTimeMinutes": 12,
+        "stars": 4.7,
+        "recipeYield": "24 cookies",
+        "keywords": "peanut butter cookies, classic cookie recipe, nutty desserts, easy baking recipe",
+        "reviewCount": 30,
+        "image": "https://images.unsplash.com/photo-1591899495446-836c1c873ae7?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Cookies",
+        "calories": "150 per serving",
+        "cuisine": "American",
+        "ingredients": [
+          "1/2 cup softened butter",
+          "1/2 cup peanut butter",
+          "1/2 cup granulated sugar",
+          "1/2 cup brown sugar",
+          "1 egg",
+          "1 teaspoon vanilla extract",
+          "1 1/4 cups all-purpose flour",
+          "1/2 teaspoon baking soda",
+          "1/4 teaspoon salt"
+        ]
+      },
+      {
+        "id": "sugar-cookies",
+        "dish": "Sugar Cookies",
+        "description": "Deliciously simple and buttery sugar cookies with a soft center and crisp edges, perfect for decorating or enjoying plain.",
+        "recipe": "Preheat the oven to 175°C (350°F). In a bowl, cream together 1 cup of softened butter and 1 cup of granulated sugar until smooth. Beat in 1 egg and 1 teaspoon of vanilla extract. In another bowl, combine 2 3/4 cups of flour, 1 teaspoon of baking soda, and 1/2 teaspoon of baking powder. Gradually add the dry ingredients to the wet ingredients. Roll the dough into balls and place them on a lined baking sheet. Flatten slightly with your hand. Sprinkle with sugar, if desired. Bake for 8-10 minutes, or until edges are lightly golden. Cool on a wire rack.",
+        "minutesOfPreparation": 20,
+        "cookingTimeMinutes": 10,
+        "stars": 4.5,
+        "recipeYield": "24 to 30 cookies",
+        "keywords": "sugar cookies, easy cookie recipe, decorating cookies, classic sugar cookies",
+        "reviewCount": 40,
+        "image": "https://images.unsplash.com/photo-1611846943916-9c2f8be15850?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Cookies",
+        "calories": "120 per serving",
+        "cuisine": "American",
+        "ingredients": [
+          "1 cup softened butter",
+          "1 cup granulated sugar",
+          "1 egg",
+          "1 teaspoon vanilla extract",
+          "2 3/4 cups all-purpose flour",
+          "1 teaspoon baking soda",
+          "1/2 teaspoon baking powder"
+        ]
+      },
+      {
+        "id": "dbl-choco-cookies",
+        "dish": "Double Chocolate Cookies",
+        "description": "Rich and fudgy double chocolate cookies loaded with cocoa and melty chocolate chips for an indulgent treat.",
+        "recipe": "Preheat the oven to 175°C (350°F). In a bowl, cream together 1/2 cup of softened butter, 1 cup of granulated sugar, and 1/2 cup of brown sugar until fluffy. Mix in 2 large eggs and 1 teaspoon of vanilla extract. In another bowl, whisk together 1 3/4 cups of flour, 1/2 cup of cocoa powder, 1 teaspoon of baking soda, and 1/4 teaspoon of salt. Gradually combine the dry ingredients with the wet ingredients. Fold in 1 1/2 cups of chocolate chips. Drop spoonfuls of dough onto a lined baking sheet and bake for 10-12 minutes. Cool on a wire rack.",
+        "minutesOfPreparation": 30,
+        "cookingTimeMinutes": 12,
+        "stars": 4.9,
+        "recipeYield": "18 to 24 cookies",
+        "keywords": "double chocolate cookies, fudgy cookies, chocolate desserts, rich cookies",
+        "reviewCount": 50,
+        "image": "https://images.unsplash.com/photo-1588195547116-6a514230c4ff?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Cookies",
+        "calories": "300 per serving",
+        "cuisine": "American",
+        "ingredients": [
+          "1/2 cup softened butter",
+          "1 cup granulated sugar",
+          "1/2 cup brown sugar",
+          "2 large eggs",
+          "1 teaspoon vanilla extract",
+          "1 3/4 cups all-purpose flour",
+          "1/2 cup cocoa powder",
+          "1 teaspoon baking soda",
+          "1/4 teaspoon salt",
+          "1 1/2 cups chocolate chips"
+        ]
+      }
+    ],
+  
+    "iceCreams": [
+      {
+        "id": "vanilla-iceCream",
+        "dish": "Vanilla Ice Cream",
+        "description": "A creamy and classic vanilla ice cream with a rich flavor, perfect as a base for toppings or enjoyed on its own.",
+        "recipe": "In a medium saucepan, heat 2 cups of heavy cream, 1 cup of whole milk, and 3/4 cup of granulated sugar over medium heat until the sugar dissolves. Remove from heat and stir in 2 teaspoons of pure vanilla extract. Let the mixture cool, then chill in the refrigerator for at least 2 hours. Pour the chilled mixture into an ice cream maker and churn according to the manufacturer's instructions. Transfer to a container and freeze for 4-6 hours before serving.",
+        "minutesOfPreparation": 20,
+        "cookingTimeMinutes": 5,
+        "stars": 4.8,
+        "recipeYield": "1 quart",
+        "keywords": "vanilla ice cream, homemade ice cream, classic dessert, frozen treats",
+        "reviewCount": 45,
+        "image": "https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=1416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Ice Creams"
+      },
+      {
+        "id": "choco-iceCream",
+        "dish": "Chocolate Ice Cream",
+        "description": "Decadent and creamy chocolate ice cream made with real cocoa for a rich and smooth texture.",
+        "recipe": "In a saucepan, combine 2 cups of heavy cream, 1 cup of whole milk, 3/4 cup of granulated sugar, and 1/2 cup of unsweetened cocoa powder. Heat over medium heat, whisking until smooth. In a separate bowl, whisk 4 large egg yolks. Slowly add a cup of the hot mixture to the yolks while whisking, then return it all to the saucepan. Cook until slightly thickened. Remove from heat and stir in 1 teaspoon of vanilla extract. Chill the mixture for 2 hours, then churn in an ice cream maker and freeze for 4-6 hours.",
+        "minutesOfPreparation": 30,
+        "cookingTimeMinutes": 10,
+        "stars": 4.7,
+        "recipeYield": "1 quart",
+        "keywords": "chocolate ice cream, creamy dessert, rich cocoa flavor, frozen treats",
+        "reviewCount": 50,
+        "image": "https://images.unsplash.com/photo-1586985289071-36f62f55ce44?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Ice Creams"
+      },
+      {
+        "id": "strawberry-iceCream",
+        "dish": "Strawberry Ice Cream",
+        "description": "Refreshing and fruity strawberry ice cream made with fresh strawberries for a naturally sweet flavor.",
+        "recipe": "In a blender, puree 2 cups of fresh strawberries with 1/2 cup of sugar. In a bowl, mix 1 cup of whole milk, 2 cups of heavy cream, and the strawberry puree. Chill the mixture in the refrigerator for at least 2 hours. Pour the chilled mixture into an ice cream maker and churn according to the manufacturer's instructions. Freeze for 4-6 hours before serving.",
+        "minutesOfPreparation": 25,
+        "cookingTimeMinutes": 5,
+        "stars": 4.6,
+        "recipeYield": "1 quart",
+        "keywords": "strawberry ice cream, fruity dessert, fresh strawberries, frozen treats",
+        "reviewCount": 35,
+        "image": "https://plus.unsplash.com/premium_photo-1669680785558-c189b49aed4e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Ice Creams"
+      },
+      {
+        "id": "mint-iceCream",
+        "dish": "Mint Chocolate Chip Ice Cream",
+        "description": "Cool and creamy mint ice cream with bursts of chocolate chips, a refreshing and indulgent treat.",
+        "recipe": "In a saucepan, heat 2 cups of heavy cream, 1 cup of whole milk, and 3/4 cup of sugar over medium heat until the sugar dissolves. Remove from heat and stir in 1 teaspoon of peppermint extract and a few drops of green food coloring (optional). Chill the mixture in the refrigerator for 2 hours. Pour the mixture into an ice cream maker and churn according to the manufacturer's instructions. Fold in 1 cup of mini chocolate chips. Freeze for 4-6 hours before serving.",
+        "minutesOfPreparation": 30,
+        "cookingTimeMinutes": 10,
+        "stars": 4.9,
+        "recipeYield": "1 quart",
+        "keywords": "mint chocolate chip ice cream, refreshing dessert, frozen treats, minty ice cream",
+        "reviewCount": 40,
+        "image": "https://images.unsplash.com/photo-1534706936160-d5ee67737249?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Ice Creams"
+      },
+      {
+        "id": "coffe-iceCream",
+        "dish": "Coffee Ice Cream",
+        "description": "Rich and creamy coffee ice cream with bold flavor, perfect for coffee lovers seeking a frozen treat.",
+        "recipe": "In a saucepan, heat 2 cups of heavy cream, 1 cup of whole milk, 3/4 cup of sugar, and 2 tablespoons of instant coffee granules over medium heat until the sugar and coffee dissolve. In a separate bowl, whisk 4 large egg yolks. Slowly add a cup of the hot mixture to the yolks while whisking, then return it all to the saucepan. Cook until slightly thickened. Remove from heat and let cool. Chill the mixture for 2 hours, then churn in an ice cream maker and freeze for 4-6 hours.",
+        "minutesOfPreparation": 35,
+        "cookingTimeMinutes": 10,
+        "stars": 4.8,
+        "recipeYield": "1 quart",
+        "keywords": "coffee ice cream, bold flavor, frozen dessert, creamy coffee treat",
+        "reviewCount": 48,
+        "image": "https://images.unsplash.com/photo-1598268121084-c8f7126e0cef?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "Ice Creams"
+      }
+    ],
+  
+    "fried": [
+      {
+        "id": "fried-churros",
+        "dish": "Fried Churros",
+        "description": "Crispy and golden churros coated in cinnamon sugar, perfect for dipping in chocolate or enjoying on their own.",
+        "recipe": "In a saucepan, heat 1 cup of water, 1/2 cup of unsalted butter, 1 tablespoon of sugar, and a pinch of salt until boiling. Remove from heat and stir in 1 cup of flour until the mixture forms a dough. Let cool slightly, then mix in 2 large eggs, one at a time, until smooth. Heat oil in a deep fryer to 180°C (350°F). Pipe the dough into the hot oil using a star-tipped piping bag, cutting into 6-inch pieces. Fry until golden, about 2-3 minutes per side. Drain on paper towels and roll in cinnamon sugar. Serve warm.",
+        "minutesOfPreparation": 30,
+        "cookingTimeMinutes": 15,
+        "stars": 4.9,
+        "recipeYield": "20 churros",
+        "keywords": "fried churros, cinnamon sugar, crispy dessert, sweet treat",
+        "reviewCount": 60,
+        "image": "https://plus.unsplash.com/premium_photo-1713687789756-b38c7870eef6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "fried"
+      },
+      {
+        "id": "fried-ice-cream",
+        "dish": "Fried Ice Cream",
+        "description": "A delightful mix of crispy coating and creamy ice cream, served with your favorite toppings for an indulgent treat.",
+        "recipe": "Scoop 4 balls of ice cream and freeze them until solid. Roll the ice cream balls in crushed cornflakes, then in beaten egg, and coat again in cornflakes. Freeze the coated balls for at least 2 hours. Heat oil in a deep fryer to 190°C (375°F). Fry each ice cream ball for about 10 seconds, just until golden. Drain quickly and serve immediately with whipped cream or chocolate sauce.",
+        "minutesOfPreparation": 20,
+        "cookingTimeMinutes": 5,
+        "stars": 4.8,
+        "recipeYield": "4 servings",
+        "keywords": "fried ice cream, crispy dessert, frozen treat, indulgent dessert",
+        "reviewCount": 50,
+        "image": "https://img.freepik.com/free-photo/delicious-baked-apple-with-nuts-cinnamon-christmas-white-table_181624-28734.jpg?t=st=1732302814~exp=1732306414~hmac=f8027f649545aa7eadb6c98752e91335f4b2e5114f3452c349e71919e4209650&w=360",
+        "category": "fried"
+      },
+      {
+        "id": "fried-donuts",
+        "dish": "Fried Donuts",
+        "description": "Soft and fluffy donuts, fried to perfection and topped with your choice of glaze or powdered sugar.",
+        "recipe": "In a bowl, combine 1 cup of warm milk, 1/4 cup of granulated sugar, and 2 1/4 teaspoons of active dry yeast. Let sit for 5 minutes. Add 2 large eggs, 1/3 cup of melted butter, and 4 cups of flour. Knead the dough until smooth and let rise for 1 hour. Roll out the dough and cut into donut shapes. Heat oil in a deep fryer to 180°C (350°F). Fry the donuts for 1-2 minutes per side, until golden. Drain on paper towels and glaze with your choice of icing or sprinkle with powdered sugar.",
+        "minutesOfPreparation": 90,
+        "cookingTimeMinutes": 15,
+        "stars": 4.7,
+        "recipeYield": "12 donuts",
+        "keywords": "fried donuts, fluffy dessert, homemade donuts, sweet treat",
+        "reviewCount": 70,
+        "image": "https://img.freepik.com/premium-photo/doughnuts-donuts_842717-2460.jpg?w=740",
+        "category": "fried"
+      },
+      {
+        "id": "apple-fritters",
+        "dish": "Apple Fritters",
+        "description": "Sweet and crispy apple fritters with chunks of fresh apple, drizzled with a delicious glaze.",
+        "recipe": "In a bowl, mix 1 cup of flour, 1/4 cup of sugar, 1 teaspoon of baking powder, and 1/4 teaspoon of salt. In another bowl, whisk together 1/3 cup of milk, 1 large egg, and 1 teaspoon of vanilla extract. Combine the wet and dry ingredients, then fold in 1 cup of diced apples. Heat oil in a deep fryer to 180°C (350°F). Drop spoonfuls of batter into the hot oil and fry until golden brown, about 2-3 minutes per side. Drain on paper towels and drizzle with glaze made from powdered sugar and milk.",
+        "minutesOfPreparation": 30,
+        "cookingTimeMinutes": 10,
+        "stars": 4.6,
+        "recipeYield": "10 fritters",
+        "keywords": "apple fritters, fried dessert, fruity treat, sweet glaze",
+        "reviewCount": 55,
+        "image": "https://img.freepik.com/premium-photo/tasty-apple-pie-plate-piece-apple-pie-with-ice-cream_75924-21611.jpg?w=740",
+        "category": "fried"
+      },
+      {
+        "id": "fried-oreos",
+        "dish": "Fried Oreos",
+        "description": "Indulgent fried Oreos with a crispy batter coating, perfect for parties or a decadent snack.",
+        "recipe": "In a bowl, whisk together 1 cup of pancake mix, 1 large egg, and 2/3 cup of milk to form a smooth batter. Heat oil in a deep fryer to 180°C (350°F). Dip each Oreo cookie into the batter, ensuring it is fully coated, and gently drop into the hot oil. Fry for 1-2 minutes, or until golden. Drain on paper towels and dust with powdered sugar before serving.",
+        "minutesOfPreparation": 20,
+        "cookingTimeMinutes": 5,
+        "stars": 4.8,
+        "recipeYield": "10 fried Oreos",
+        "keywords": "fried Oreos, sweet treat, crispy batter, indulgent dessert",
+        "reviewCount": 65,
+        "image": "https://img.freepik.com/premium-photo/there-are-lot-cookies-oreos-yellow-surface-generative-ai_1035766-5289.jpg",
+        "category": "fried"
+      }
+    ],
+  
+    "fruits": [
+      {
+        "id": "berry-parfait",
+        "dish": "Berry Parfait",
+        "description": "A refreshing and nutritious parfait layered with creamy yogurt, juicy berries, and crunchy granola.",
+        "recipe": "In a glass, layer 1 cup of low-fat Greek yogurt with 1/2 cup of mixed fresh berries (blueberries, strawberries, raspberries) and 1/4 cup of granola. Repeat the layers until the glass is full. Top with a drizzle of honey and a sprig of fresh mint if desired. Serve immediately.",
+        "minutesOfPreparation": 10,
+        "cookingTimeMinutes": 0,
+        "stars": 4.7,
+        "recipeYield": "2 servings",
+        "keywords": "berry parfait, healthy dessert, yogurt and granola, quick snack",
+        "reviewCount": 45,
+        "image": "https://img.freepik.com/free-photo/still-life-cup-brazilian-acai-dessert_52683-100680.jpg?t=st=1732303056~exp=1732306656~hmac=e8a0d3914ac78a6e68b12283940ec315d4fa44a6f0b4066b92238128f7a17223&w=360",
+        "category": "fruits"
+      },
+      {
+        "id": "baked-apples",
+        "dish": "Baked Apples",
+        "description": "Warm and tender baked apples stuffed with a sweet and nutty oat mixture, perfect for a comforting dessert.",
+        "recipe": "Preheat the oven to 175°C (350°F). Core 4 apples, leaving the bottoms intact. Mix 1/4 cup of rolled oats, 2 tablespoons of brown sugar, 1 teaspoon of cinnamon, and 2 tablespoons of chopped nuts in a bowl. Fill each apple with the mixture and place them in a baking dish. Pour 1/2 cup of water into the dish and bake for 30-40 minutes, or until the apples are tender. Serve warm, optionally with a dollop of yogurt.",
+        "minutesOfPreparation": 40,
+        "cookingTimeMinutes": 30,
+        "stars": 4.8,
+        "recipeYield": "4 servings",
+        "keywords": "baked apples, warm dessert, oat filling, fruity comfort food",
+        "reviewCount": 60,
+        "image": "https://img.freepik.com/free-photo/baked-apples-with-raisins-nuts-honey_2829-7259.jpg?t=st=1732303082~exp=1732306682~hmac=b6221e90b518a6e7e0b949eff7c40ebe0bd3b0cf2ee53572e47f43312d649a6e&w=360",
+        "category": "fruits"
+      },
+      {
+        "id": "chia-pudding-with-mango",
+        "dish": "Chia Pudding with Mango",
+        "description": "A creamy chia pudding layered with sweet, fresh mango and topped with shredded coconut for a tropical touch.",
+        "recipe": "In a bowl, mix 1/4 cup of chia seeds with 1 cup of almond milk, 1 teaspoon of vanilla extract, and 1 tablespoon of maple syrup. Stir well and refrigerate for at least 4 hours or overnight, stirring once after the first hour. To serve, layer the chia pudding in a glass with 1/2 cup of diced fresh mango and sprinkle with shredded coconut.",
+        "minutesOfPreparation": 5,
+        "cookingTimeMinutes": 0,
+        "stars": 4.9,
+        "recipeYield": "2 servings",
+        "keywords": "chia pudding, mango dessert, tropical snack, healthy recipe",
+        "reviewCount": 50,
+        "image": "https://img.freepik.com/free-photo/freshness-sweetness-bowl-yogurt-generated-by-ai_188544-151520.jpg?t=st=1732303128~exp=1732306728~hmac=c1a632125b24d297f956fa6291f15008b4abff26492d38ae76456db36f5db7d9&w=740",
+        "category": "fruits"
+      },
+      {
+        "id": "banana-oat-cookies",
+        "dish": "Banana Oat Cookies",
+        "description": "Soft and chewy banana oat cookies made with simple, wholesome ingredients for a guilt-free treat.",
+        "recipe": "Preheat the oven to 175°C (350°F). In a bowl, mash 2 ripe bananas and mix with 1 cup of rolled oats and 1/4 cup of raisins or dark chocolate chips. Scoop the mixture onto a lined baking sheet, forming small cookies. Bake for 12-15 minutes, or until set and lightly golden. Let cool on a wire rack before serving.",
+        "minutesOfPreparation": 20,
+        "cookingTimeMinutes": 15,
+        "stars": 4.6,
+        "recipeYield": "12 cookies",
+        "keywords": "banana cookies, oat cookies, healthy snack, guilt-free dessert",
+        "reviewCount": 40,
+        "image": "https://img.freepik.com/premium-photo/breakfast-with-chocolate-cookie-muesli-banana_687035-2560.jpg?w=740",
+        "category": "fruits"
+      },
+      {
+        "id": "grilled-peaches",
+        "dish": "Grilled Peaches with Honey and Yogurt",
+        "description": "Juicy grilled peaches served with creamy yogurt, a drizzle of honey, and a sprinkle of crunchy almonds.",
+        "recipe": "Preheat a grill or grill pan over medium heat. Cut 2 ripe peaches in half and remove the pits. Brush the cut sides with a little olive oil. Grill the peaches, cut side down, for 3-4 minutes until lightly charred. Remove from the grill and drizzle with honey. Serve each peach half with a dollop of Greek yogurt and a sprinkle of chopped almonds.",
+        "minutesOfPreparation": 15,
+        "cookingTimeMinutes": 5,
+        "stars": 4.7,
+        "recipeYield": "4 servings",
+        "keywords": "grilled peaches, honey and yogurt, fruity dessert, summer treat",
+        "reviewCount": 55,
+        "image": "https://img.freepik.com/free-photo/grilled-peaches-with-whipped-cream_144627-14533.jpg?t=st=1732303225~exp=1732306825~hmac=698088c3429e97534b10a5c09e597c5cb8cc5be8c04afe4d18c9f320261c67a6&w=360",
+        "category": "fruits"
+      }
+    ]
+  }

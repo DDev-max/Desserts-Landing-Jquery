@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Delight in our irresistible desserts, from gourmet cakes and creamy cheesecakes to artisan pastries. Perfect for celebrations or sweet everyday treats!" />
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>Sweet Bliss</title>
+</head>
+
+<body>
+    <a href='#mainContent'>Skip to main content</a>
+
+    <header class="header">
+        <a title='Go to main page' class="header_logo_link" href='/'>
+            <img src='./public/pageLogo.webp' alt='' />
+        </a>
+
+        <button class="header_menuBtn" aria-label='Navigation menu' aria-expanded='' aria-controls='navMenu'>
+            <span class="header_closedMenu"></span>
+
+            <svg class="header_menuSVG" viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' fill='current-color'>
+                <g stroke-width='0'></g>
+                <g stroke-linecap='round' strokeLinejoin='round'></g>
+                <g>
+                    {' '}
+                    <path fill='currentColor' fillRule='evenodd'
+                        d='M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z'>
+                    </path>{' '}
+                </g>
+            </svg>
+
+        </button>
+
+        <span class="header_navBg"></span>
+
+        <nav id='navMenu' class="header_nav">
+            <ul class="header_nav_menu">
+                <li class="header_nav_menu_item">
+                    <a href='#popular'>Popular</a>
+                </li>
+
+                <li class="header_nav_menu_item">
+                    <a href='#new'>New</a>
+                </li>
+
+                <li class="header_nav_menu_item">
+                    <a href='#aboutUs'>About Us</a>
+                </li>
+
+                <li class="header_nav_menu_item" id="displayMenu">
+                    <a aria-controls='subMenu1' aria-expanded='' id="categoriesMenu" href='#categories'>
+                        Types ▼
+                    </a>
+
+                    <ul id='subMenu1' class="header_nav_menu_item_subMenu ">
+
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/script.js" type="module"></script>
+</body>
+
+</html>
