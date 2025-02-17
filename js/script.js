@@ -5,6 +5,7 @@ import {LinkSVG} from "./svg/LinkSVG.js"
 import {StarsSVG} from "./svg/Stars.js"
 import {PaginationButtons} from "./PaginationButtons.js"
 import {baseUrl,categoriesUrl,emptyStarColorCode,faqUrl,sponsorsUrl,starColorCode} from "./consts.js"
+import { generateJsonLd } from "./functions/generateJsonLd.js"
 
 $(async () => {
 
@@ -145,9 +146,12 @@ $(async () => {
 
     $.getJSON(`${baseUrl}/${currentCategory}?_page=${curerntPage}&_per_page=2`, function (recipes) {
 
-
-
-      recipes.data[recipes.data.length - 1].category.toLowerCase() == currentCategory
+      $("head").append(`
+        
+        <script type="application/ld+json">
+          ${ generateJsonLd({from: recipes, type: "recipeList"})}
+        </script>
+      `)
 
       $categoriesSctn.after(`
         <div
@@ -183,7 +187,7 @@ $(async () => {
           <article class="recipesCont_recipe" id=${el.id}>
           <img
             class="recipesCont_recipe_img"
-            alt="${el.dish}"
+            alt="${el.dish}"]
             src=${el.image}
           />
   
@@ -264,6 +268,13 @@ $(async () => {
   $(async function renderFaq() {
 
     $.getJSON(faqUrl, function (faqData) {
+
+      $("head").append(`
+        
+        <script type="application/ld+json">
+          ${ generateJsonLd({from: faqData, type: "faq"})}
+        </script>
+      `)
 
       faqData.forEach((elmt) => {
         $(".faqSctn_questionCont").append(`
