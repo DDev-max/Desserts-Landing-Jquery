@@ -5,6 +5,7 @@ import { fetchData } from "./fetchData.js";
 import { hideSubMenu, showSubMenu, toggleMenu } from "./header/menuFunctions.js";
 import { emptyStarColorCode, starColorCode } from "./consts.js";
 import { PaginationButtons } from "./paginationButtons.js";
+import { LinkSVG } from "./linkSVG.js";
 
 
 $(async () => {
@@ -15,22 +16,16 @@ $(async () => {
 
 
   $(function getCategories() {
-    categories.forEach(el => {
+    categories.reverse().forEach(el => {
       $subMenu.append(
         `<li>
-              <a 
-                href=${createUrl(
-          {
-            paramsAndValueObj: { category: el.id },
-            hash: 'categories'
-          })}
-              >
-                   
-                ${el.name}
-
-              </a>
-          </li>`
-      )
+          <a 
+            href=${createUrl({ paramsAndValueObj: { category: el.id }, hash: 'categories' })}
+          >
+            ${el.name}
+          </a>
+        </li>`
+      );
     });
 
   });
@@ -100,7 +95,7 @@ $(async () => {
   $(function renderCategories() {
     const $categoriesCont = $("#categories")
     categories.forEach(el => {
-      $categoriesCont.append(`
+      $categoriesCont.prepend(`
         <a
           tabIndex=${currentCategory === el.id ? 0 : -1}
           role='tab'
@@ -141,7 +136,7 @@ $(async () => {
   })
 
   $(async function renderRecipesPg() {
-    const $recipeAndCategoriesCont = $(".fullCateogriesCont")
+    const $categoriesSctn = $(".categoriesSctn")
     const curerntPage = new URLSearchParams(window.location.search).get("page") || '1'
 
     
@@ -149,7 +144,7 @@ $(async () => {
 
     recipes.data[recipes.data.length - 1].category.toLowerCase() == currentCategory
 
-    $recipeAndCategoriesCont.append(`
+    $categoriesSctn.after(`
       <div
       tabIndex="0"
       aria-labelledby="${currentCategory}ID"
@@ -160,10 +155,10 @@ $(async () => {
 
         ${PaginationButtons({
           currentPage: Number(curerntPage),
+          buttonsQtty:  recipes.pages,
           selectedBtnClassName: "recipesCont_btnsCont_btn--selected",
           classNameCont: "recipesCont_btnsCont",
           classNameBtn: "recipesCont_btnsCont_btn",
-          buttonsQtty:  recipes.pages
         })}
       </div>`
     )
@@ -225,7 +220,45 @@ $(async () => {
       
     })
 
+
+  $(async function renderSponsor() {
+      const sponsorRecipes = await fetchData({URL: "http://localhost:3000/sponsor"})
+      sponsorRecipes.forEach((elmnt)=>{
+        $(".section_grid").append(`
+        <a rel='sponsored' href=${elmnt.url} class="section_grid_elmnt">
+            <img class="section_grid_elmnt_img" src=${elmnt.image} alt=${elmnt.dish} />
+
+            <div class="section_grid_elmnt_recipeCont">
+              <h3 class="section_grid_elmnt_recipeCont_title">
+                  ${elmnt.dish}
+
+                ${LinkSVG({className: "section_grid_elmnt_recipeCont_title_linkSVG"})}
+              </h3>
+            </div>
+          </a>
+          `)
+      })
   })
+
+
+  $(async function renderFaq() {
+    const faqData = await fetchData({URL: "http://localhost:3000/faq"})
+
+    faqData.forEach((elmt)=>{
+      $(".faqSctn_questionCont").append(`
+        <details class="faqSctn_questionCont_details" name='question'>
+            <summary class="faqSctn_questionCont_summ">
+              ${elmt.question}
+            </summary>
+            <p class="faqSctn_questionCont_p"> 
+              ${elmt.answer}
+            </p>
+        </details>
+        `)
+
+    })
+  })
+})
 
 
 

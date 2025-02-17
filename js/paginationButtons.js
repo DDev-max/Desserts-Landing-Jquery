@@ -2,7 +2,7 @@ import { createUrl } from "./createUrl.js"
 
 export function PaginationButtons( {buttonsQtty, classNameBtn, classNameCont, currentPage, selectedBtnClassName}){
     const emptyArray = Array.from({ length: buttonsQtty }, (_, idx) => idx + 1)
-
+    
     const btns =  emptyArray.map((elmnt, idx)=>(`
          <a
           class="${classNameBtn} ${currentPage == elmnt ? selectedBtnClassName : ''}"
