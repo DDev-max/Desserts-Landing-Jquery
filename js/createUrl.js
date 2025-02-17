@@ -1,5 +1,6 @@
-export function createUrl({ paramsAndValueObj, pathName, router, searchParams, hash }) {
-    const params = new URLSearchParams(searchParams)
+export function createUrl({ paramsAndValueObj, router, hash }) {
+    const params = new URLSearchParams(window.location.search)
+    const pathName  = window.location.pathname
   
     Object.entries(paramsAndValueObj).forEach(([param, value]) => {
       params.set(param, value.toString())

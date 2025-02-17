@@ -19,7 +19,7 @@
             <img src='./public/pageLogo.webp' alt='' />
         </a>
 
-        <button class="header_menuBtn" aria-label='Navigation menu' aria-expanded='' aria-controls='navMenu'>
+        <button class="header_menuBtn" aria-label='Navigation menu' aria-expanded='false' aria-controls='navMenu'>
             <span class="header_closedMenu"></span>
 
             <svg class="header_menuSVG" viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' fill='current-color'>
@@ -52,7 +52,7 @@
                 </li>
 
                 <li class="header_nav_menu_item" id="displayMenu">
-                    <a aria-controls='subMenu1' aria-expanded='' id="categoriesMenu" href='#categories'>
+                    <a aria-controls='subMenu1' aria-expanded='false' id="categoriesMenu" href='#categories'>
                         Types ▼
                     </a>
 
@@ -64,6 +64,31 @@
         </nav>
     </header>
 
+    <main id='mainContent'>
+        <div class="welcomeCont">
+            <h1 class="welcomeCont_txt">Welcome to your happy place!</h1>
+            <img class="welcomeCont_img" width={450} height={350} src="public/welcomeImg.webp" alt='' />
+        </div>
+
+        <div class="mainPadding">
+            <div class="fullCateogriesCont">
+                <section class="categoriesSctn">
+                    <h2>Choose your sweet destiny!</h2>
+
+
+                    <div role='tablist' id='categories' class="categoriesSctn_categoriesCont">
+                            
+                    </div>
+                </section>
+
+
+                
+            </div>
+
+
+
+        </div>
+    </main>
 
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/script.js" type="module"></script>
