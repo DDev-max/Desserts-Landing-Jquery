@@ -1,34 +1,81 @@
-import { createUrl } from "./createUrl.js";
-import {StarsSVG} from "./Stars.js"
-import {Clock} from "./clock.js"
-import { fetchData } from "./fetchData.js";
-import { hideSubMenu, showSubMenu, toggleMenu } from "./header/menuFunctions.js";
-import { emptyStarColorCode, starColorCode } from "./consts.js";
-import { PaginationButtons } from "./paginationButtons.js";
-import { LinkSVG } from "./linkSVG.js";
-
+import {createUrl} from "./functions/createUrl.js"
+import {hideSubMenu,showSubMenu,toggleMenu} from "./functions/menuFunctions.js"
+import {Clock} from "./svg/Clock.js"
+import {LinkSVG} from "./svg/LinkSVG.js"
+import {StarsSVG} from "./svg/Stars.js"
+import {PaginationButtons} from "./PaginationButtons.js"
+import {baseUrl,categoriesUrl,emptyStarColorCode,faqUrl,sponsorsUrl,starColorCode} from "./consts.js"
 
 $(async () => {
-  const categories = await fetchData({ URL: "http://localhost:3000/categories" });
+
   const currentCategory = new URLSearchParams(window.location.search).get("category") || 'cookies'
   const $subMenu = $("#subMenu1");
 
 
+  $.getJSON(categoriesUrl, function (categories) {
 
-  $(function getCategories() {
-    categories.reverse().forEach(el => {
-      $subMenu.append(
-        `<li>
-          <a 
-            href=${createUrl({ paramsAndValueObj: { category: el.id }, hash: 'categories' })}
-          >
-            ${el.name}
-          </a>
-        </li>`
-      );
+    $(function getCategories() {
+      categories.reverse().forEach(el => {
+        $subMenu.append(
+          `<li>
+            <a 
+              href=${createUrl({ paramsAndValueObj: { category: el.id }, hash: 'categories' })}
+            >
+              ${el.name}
+            </a>
+          </li>`
+        );
+      });
+
     });
 
+    $(function renderCategories() {
+      const $categoriesCont = $("#categories")
+      categories.forEach(el => {
+        $categoriesCont.prepend(`
+          <a
+            tabIndex=${currentCategory === el.id ? 0 : -1}
+            role='tab'
+            aria-selected=${currentCategory === el.id}
+            aria-controls='${el.id}Tab'
+            id='${el.id}ID'
+            class="categoriesSctn_btn ${currentCategory == el.id ? 'categoriesSctn_btn--selected' : ''}"
+            href=${createUrl({
+          paramsAndValueObj: { category: el.id, page: 1 }
+        })}
+          >
+            <img class="categoriesSctn_btn_img" alt="${el.name} category"  src=${el.imgLink}/>
+            <p class="categoriesSctn_btn_title">
+              ${el.name}
+            </p>
+          </a>
+          `)
+      });
+
+      const allCategories = Array.from($("#categories [role='tab']"))
+      let focusedCategory = allCategories.findIndex(el => el.id == `${currentCategory}ID`)
+
+
+      $categoriesCont.keydown((e) => {
+        const totalCategories = allCategories.length
+
+        if (e.key === 'ArrowRight') {
+          focusedCategory = (focusedCategory + 1) % totalCategories;
+          allCategories[focusedCategory].focus()
+
+
+        } else if (e.key === 'ArrowLeft') {
+          focusedCategory = (focusedCategory - 1 + totalCategories) % totalCategories;
+          allCategories[focusedCategory].focus()
+        }
+      })
+
+    })
+
+  }).fail(function (xhr, status, error) {
+    console.error('Error: ' + error);
   });
+
 
   $(function displayMenu() {
     const $displayMenu = $("#displayMenu");
@@ -92,176 +139,151 @@ $(async () => {
     })
   })
 
-  $(function renderCategories() {
-    const $categoriesCont = $("#categories")
-    categories.forEach(el => {
-      $categoriesCont.prepend(`
-        <a
-          tabIndex=${currentCategory === el.id ? 0 : -1}
-          role='tab'
-          aria-selected=${currentCategory === el.id}
-          aria-controls='${el.id}Tab'
-          id='${el.id}ID'
-          class="categoriesSctn_btn ${currentCategory == el.id ? 'categoriesSctn_btn--selected' : ''}"
-          href=${createUrl({
-        paramsAndValueObj: { category: el.id, page: 1 }
-      })}
-        >
-          <img class="categoriesSctn_btn_img" alt="${el.name} category"  src=${el.imgLink}/>
-          <p class="categoriesSctn_btn_title">
-            ${el.name}
-          </p>
-        </a>
-        `)
-    });
-
-    const allCategories = Array.from($("#categories [role='tab']"))
-    let focusedCategory = allCategories.findIndex(el => el.id == `${currentCategory}ID`)
-
-
-    $categoriesCont.keydown((e) => {
-      const totalCategories = allCategories.length
-
-      if (e.key === 'ArrowRight') {
-        focusedCategory = (focusedCategory + 1) % totalCategories;
-        allCategories[focusedCategory].focus()
-
-
-      } else if (e.key === 'ArrowLeft') {
-        focusedCategory = (focusedCategory - 1 + totalCategories) % totalCategories;
-        allCategories[focusedCategory].focus()
-      }
-    })
-
-  })
-
   $(async function renderRecipesPg() {
     const $categoriesSctn = $(".categoriesSctn")
     const curerntPage = new URLSearchParams(window.location.search).get("page") || '1'
 
-    
-    const recipes = await fetchData({ URL: `http://localhost:3000/${currentCategory}?_page=${curerntPage}&_per_page=2` })
+    $.getJSON(`${baseUrl}/${currentCategory}?_page=${curerntPage}&_per_page=2`, function (recipes) {
 
-    recipes.data[recipes.data.length - 1].category.toLowerCase() == currentCategory
 
-    $categoriesSctn.after(`
-      <div
-      tabIndex="0"
-      aria-labelledby="${currentCategory}ID"
-      id="${currentCategory}Tab"
-      class="recipesCont ${recipes.data[0].category.toLowerCase() == currentCategory ? 'recipesCont--rightBrdr': ''}
-      ${recipes.data[recipes.data.length - 1].category.toLowerCase() == currentCategory ? 'recipesCont--leftBrdr': ''}"
-      >
 
-        ${PaginationButtons({
-          currentPage: Number(curerntPage),
-          buttonsQtty:  recipes.pages,
-          selectedBtnClassName: "recipesCont_btnsCont_btn--selected",
-          classNameCont: "recipesCont_btnsCont",
-          classNameBtn: "recipesCont_btnsCont_btn",
-        })}
-      </div>`
-    )
+      recipes.data[recipes.data.length - 1].category.toLowerCase() == currentCategory
 
-    
-    const $recipesCont = $(".recipesCont")
-    recipes.data.forEach(el=>{
-      const recipeSteps = el.recipe.match(/[^.]+[.]/g)
+      $categoriesSctn.after(`
+        <div
+        tabIndex="0"
+        aria-labelledby="${currentCategory}ID"
+        id="${currentCategory}Tab"
+        class="recipesCont ${recipes.data[0].category.toLowerCase() == currentCategory ? 'recipesCont--rightBrdr' : ''}
+        ${recipes.data[recipes.data.length - 1].category.toLowerCase() == currentCategory ? 'recipesCont--leftBrdr' : ''}"
+        >
+  
+          ${PaginationButtons({
+        currentPage: Number(curerntPage),
+        buttonsQtty: recipes.pages,
+        selectedBtnClassName: "recipesCont_btnsCont_btn--selected",
+        classNameCont: "recipesCont_btnsCont",
+        classNameBtn: "recipesCont_btnsCont_btn",
+      })}
+        </div>`
+      )
 
-      const HtmlSteps = recipeSteps.map(step=>(`
-        <li>
-          ${step}
-        </li>  
-      `)).join('')
 
-      $recipesCont.prepend(`
-        <article class="recipesCont_recipe" id=${el.id}>
-        <img
-          class="recipesCont_recipe_img"
-          alt=${el.dish}
-          src=${el.image}
-        />
+      const $recipesCont = $(".recipesCont")
+      recipes.data.forEach(el => {
+        const recipeSteps = el.recipe.match(/[^.]+[.]/g)
 
-        <div class="recipesCont_recipe_aditionalInfo">
-          ${StarsSVG(el.stars)}
-          ${Clock}
-          <p>${el.minutesOfPreparation} min</p>
-        </div>
+        const HtmlSteps = recipeSteps.map(step => (`
+          <li>
+            ${step}
+          </li>  
+        `)).join('')
 
-        <div class="recipesCont_recipe_info"}>
-          <h3>${el.dish}</h3>
-          <ol>
-            ${HtmlSteps}
-          </ol>
-        </div>
-      </article>
-        `)
-    })
+        $recipesCont.prepend(`
+          <article class="recipesCont_recipe" id=${el.id}>
+          <img
+            class="recipesCont_recipe_img"
+            alt="${el.dish}"
+            src=${el.image}
+          />
+  
+          <div class="recipesCont_recipe_aditionalInfo">
+            ${StarsSVG(el.stars)}
+            ${Clock}
+            <p>${el.minutesOfPreparation} min</p>
+          </div>
+  
+          <div class="recipesCont_recipe_info"}>
+            <h3>${el.dish}</h3>
+            <ol>
+              ${HtmlSteps}
+            </ol>
+          </div>
+        </article>
+          `)
+      })
 
-    const $starsCont = $(".recipesCont_recipe_aditionalInfo");
+      const $starsCont = $(".recipesCont_recipe_aditionalInfo");
 
-    $starsCont.on("mouseenter", ".recipesCont_recipe_aditionalInfo_starsCont_star", function (event) {
+      $starsCont.on("mouseenter", ".recipesCont_recipe_aditionalInfo_starsCont_star", function (event) {
         const $star = $(event.currentTarget);
         const $container = $star.closest(".recipesCont_recipe_aditionalInfo");
         const $allStars = $container.find(".recipesCont_recipe_aditionalInfo_starsCont_star");
-    
+
         const starIdx = $allStars.index($star);
-    
+
         $allStars.each((index, starElmnt) => {
-            const $path = $(starElmnt).find("path").first();
-            $path.css({ fill: index <= starIdx ? starColorCode : emptyStarColorCode });
+          const $path = $(starElmnt).find("path").first();
+          $path.css({ fill: index <= starIdx ? starColorCode : emptyStarColorCode });
         });
+      });
+
+
+
+
+
+    }).fail(function (xhr, status, error) {
+      console.error('Error: ' + error);
     });
-    
-    
 
 
 
-      
-    })
+
+
+  })
 
 
   $(async function renderSponsor() {
-      const sponsorRecipes = await fetchData({URL: "http://localhost:3000/sponsor"})
-      sponsorRecipes.forEach((elmnt)=>{
+
+    $.getJSON(sponsorsUrl, function (sponsorRecipes) {
+
+      sponsorRecipes.forEach((elmnt) => {
         $(".section_grid").append(`
         <a rel='sponsored' href=${elmnt.url} class="section_grid_elmnt">
-            <img class="section_grid_elmnt_img" src=${elmnt.image} alt=${elmnt.dish} />
+            <img class="section_grid_elmnt_img" src=${elmnt.image} alt="${elmnt.dish}" />
 
             <div class="section_grid_elmnt_recipeCont">
               <h3 class="section_grid_elmnt_recipeCont_title">
                   ${elmnt.dish}
 
-                ${LinkSVG({className: "section_grid_elmnt_recipeCont_title_linkSVG"})}
+                ${LinkSVG({ className: "section_grid_elmnt_recipeCont_title_linkSVG" })}
               </h3>
             </div>
           </a>
           `)
       })
+    }).fail(function (xhr, status, error) {
+      console.error('Error: ' + error);
+    });
+
+
+
   })
 
 
   $(async function renderFaq() {
-    const faqData = await fetchData({URL: "http://localhost:3000/faq"})
 
-    faqData.forEach((elmt)=>{
-      $(".faqSctn_questionCont").append(`
-        <details class="faqSctn_questionCont_details" name='question'>
-            <summary class="faqSctn_questionCont_summ">
-              ${elmt.question}
-            </summary>
-            <p class="faqSctn_questionCont_p"> 
-              ${elmt.answer}
-            </p>
-        </details>
-        `)
+    $.getJSON(faqUrl, function (faqData) {
 
-    })
+      faqData.forEach((elmt) => {
+        $(".faqSctn_questionCont").append(`
+          <details class="faqSctn_questionCont_details" name='question'>
+              <summary class="faqSctn_questionCont_summ">
+                ${elmt.question}
+              </summary>
+              <p class="faqSctn_questionCont_p"> 
+                ${elmt.answer}
+              </p>
+          </details>
+          `)
+
+      })
+    }).fail(function (xhr, status, error) {
+      console.error('Error: ' + error);
+    });
+
+
+
   })
+
 })
-
-
-
-
-
-

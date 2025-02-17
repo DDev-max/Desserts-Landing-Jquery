@@ -1,4 +1,4 @@
-export function createUrl({ paramsAndValueObj, router, hash }) {
+export function createUrl({ paramsAndValueObj, hash }) {
     const params = new URLSearchParams(window.location.search)
     const pathName  = window.location.pathname
   
@@ -6,9 +6,6 @@ export function createUrl({ paramsAndValueObj, router, hash }) {
       params.set(param, value.toString())
     })
   
-    // if (router) {
-    //   router.push(`${pathName}?${params.toString()}`, { scroll: false })
-    // }
   
     if (hash) {
       return `${pathName}?${params.toString()}#${hash}`

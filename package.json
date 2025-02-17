@@ -1,5 +1,11 @@
 {
   "dependencies": {
     "json-server": "^1.0.0-beta.3"
+  },
+  "name": "jquery-version",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "scripts": {
+    "server" : "json-server public/db.json --port 4000"
   }
 }

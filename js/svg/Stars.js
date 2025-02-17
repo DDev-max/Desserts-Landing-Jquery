@@ -1,4 +1,4 @@
-import {emptyStarColorCode,starColorCode} from "./consts.js"
+import {emptyStarColorCode,starColorCode} from "../consts.js"
 
 export function StarsSVG(qtty) {
 

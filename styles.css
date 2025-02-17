@@ -57,21 +57,6 @@ button {
     background-color: transparent;
 }
 
-.skeletonAnimation {
-    animation: skeletonFlick 1.5s infinite linear;
-}
-
-@keyframes skeletonFlick {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-}
 
 
 
@@ -383,22 +368,6 @@ button {
   background-color: var(--globalDarkPink);
 }
 
-/* .categoriesSctn_btn_img--skeleton {
-  background-color: var(--globalDarkPink);
-  height: clamp(7.5rem, 20vw, 10rem);
-  width: clamp(7.5rem, 20vw, 10rem);
-  border-radius: 50%;
-}
-
-.categoriesSctn_btn_title--skeleton {
-  width: 100%;
-  border-radius: 2rem;
-  height: 3rem;
-  margin: 1rem 0;
-  background-color: var(--globalDarkPink);
-  composes: skeletonAnimation from global;
-} */
-
 .categoriesSctn_btn_img {
   border-radius: 50%;
   width: clamp(4rem, 20vw, 10rem);
@@ -464,27 +433,6 @@ button {
   padding: 1rem 0;
 }
 
-/* .recipesCont--skeleton {
-  padding: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  background-color: var(--globalDarkPink);
-  width: min(100%, 90rem);
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-  composes: skeletonAnimation from global;
-}
-
-.recipesCont_recipe--skeleton {
-  width: 92%;
-  border-radius: 2rem;
-  height: 40rem;
-  background-color: var(--globalLightPink);
-  margin: 0 auto;
-  composes: skeletonAnimation from global;
-} */
 
 .recipesCont_recipe_img {
   border-radius: 50%;
@@ -684,21 +632,6 @@ button {
   text-decoration: none;
 }
 
-.section_h2--skeleton {
-  background-color: var(--globalLightPink);
-  border-radius: 2rem;
-  height: 5rem;
-  width: min(100%, 30rem);
-  margin: 2.5rem auto;
-  composes: skeletonAnimation from global;
-}
-
-.section_grid_elmnt--skeleton {
-  height: 15.5rem;
-  background-color: var(--globalLightPink);
-  composes: skeletonAnimation from global;
-}
-
 .section_grid_elmnt_img {
   width: 100%;
   height: 11rem;
@@ -743,14 +676,6 @@ button {
   margin: 2rem;
 }
 
-.faqSctn_h2--skeleton {
-  width: min(85vw, 52rem);
-  height: 4rem;
-  border-radius: 3rem;
-  background-color: var(--globalLightPink);
-  margin: 2rem auto;
-  composes: skeletonAnimation from global;
-}
 
 .faqSctn_questionCont {
   color: var(--darkTxtColor);
@@ -765,15 +690,6 @@ button {
   border: 0.2rem solid var(--globalLightPink);
   border-radius: 2rem;
   width: 100%;
-}
-
-.faqSctn_questionCont_details--skeleton {
-  width: min(100%, 80rem);
-  height: 6.5rem;
-  margin: 1rem auto;
-  border-radius: 3rem;
-  background-color: var(--globalLightPink);
-  composes: skeletonAnimation from global;
 }
 
 .faqSctn_questionCont_summ {
