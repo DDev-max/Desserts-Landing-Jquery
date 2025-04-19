@@ -192,7 +192,9 @@ $(async () => {
           />
   
           <div class="recipesCont_recipe_aditionalInfo">
-            ${StarsSVG(el.stars)}
+            <div class="recipesCont_starsContainer">
+              ${StarsSVG(el.stars)}
+            </div>
             ${Clock}
             <p>${el.minutesOfPreparation} min</p>
           </div>
